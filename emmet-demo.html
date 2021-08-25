@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Emmet Introduction Course</title>
+	</head>
+	<body>
+		<!-- Cassidy Media - Intro to Emmet YouTube Course -->
+		
+		<!-- #page>.logo+ul#navigation>li*5>a{Item $} -->
+		<!-- Type the above Emmet syntax below -->
+		
+		
+		<!-- Elements
+		
+			You can use elements names like div or p to generate HTML tags. Emmet does not have a predefined set of
+			available tag names, you can write any word and transform it into a tag:
+			div → <div></div>, foo → <foo></foo> and so on. -->
+		
+		
+		<!--Nesting operators
+		
+			Nesting operators are used to position abbreviation elements inside generated tree: whether it should be
+			placed inside or near the context element. -->
+			
+		<!--Child: > (Greater than sign)
+		
+			You can use > operator to nest elements inside each other:
+			div>ul>li
+			Will output: -->
+		
+		
+		
+		<!--Sibling: + (Plus sign)
+		
+			Use + operator to place elements near each other, on the same level:
+			div+p+b
+			Will output: -->
+		
+		
+		<!--Climb-up: ^ (carat sign)
+		
+			With > operator you’re descending the generated tree and positions of all sibling elements will be
+			resolved against the deepest element:
+			
+			div+div>p>span+em
+			
+			...will be expanded to: -->
+		
+		
+		<!-- With ^ operator, you can climb one level up the tree and change context where following elements
+			 should appear:
+			 
+			 div+div>p>span+em^bq
+			 
+			 ...outputs to: -->
+		
+		
+		<!-- You can use as many ^ operators as you like, each operator will move one level up:
+		
+			 div+div>p>span+em^^^bq
+			 
+			 ...will output to: -->
+		
+		
+		<!-- Multiplication: *
+		
+		With * operator you can define how many elements should be outputted:
+		
+		ul>li*5
+		
+		...outputs to: -->
+		
+		
+		<!--Grouping: ()
+		
+		Parentheses are used by Emmet's power users for grouping subtrees in complex abbreviations:
+		
+		div>(header>ul>li*2>a)+footer>p
+		
+		...outputs to: -->
+		
+		
+		<!-- If you’re working with browser’s DOM, you may think of groups as Document Fragments: each group contains
+		abbreviation subtree and all the following elements are inserted at the same level as the first element of
+		group.
+
+		You can nest groups inside each other and combine them with multiplication * operator:
+		
+		(div>dl>(dt+dd)*3)+footer>p
+
+		...outputs to: -->
+		
+		
+		
+	</body>
+</html>
